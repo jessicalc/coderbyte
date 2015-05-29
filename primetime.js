@@ -1,17 +1,16 @@
 function PrimeTime(num) { 
-  var isPrime = false;
   var divisibleByNumber = 0;
   for (i = 2; i < num; i++) {
     if (num % i === 0) {
       divisibleByNumber++;
       if (divisibleByNumber > 0) {
-        isPrime = false;
-        return num + " is not a prime number";
+//         console.log(divisibleByNumber); // make sure you're only making the computer count once. once the computer has found a number that num can be divided by, stop!
+        return num + " is not a prime number.";
       }
     } else {
-      return num + " is a prime number.";
+        return num + " is a prime number."; 
     }
   }
 }
-console.log(PrimeTime(22));
-console.log(PrimeTime(3));
+console.log(PrimeTime(801));
+console.log(PrimeTime(4));
